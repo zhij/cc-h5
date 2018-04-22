@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<meta name="renderer" content="webkit">
+	<title>CC-Cos&Chat</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta name="format-detection" content="telephone=no, email=no" />
+	<meta name="x5-orientation" content="portrait">
+	<meta name="full-screen" content="yes">
+	<meta name="x5-fullscreen" content="true">
+	<meta name="x5-page-mode" content="app">
+	<meta name="msapplication-tap-highlight" content="no">
+	<script type="text/javascript">
+		(function() {
+            var ua = window.navigator.userAgent;
+            var docEl = document.documentElement;
+            var html = document.querySelector('html');
+            var isAndorid = /Android/i.test(ua);
+            var dpr = window.devicePixelRatio || 1;
+            var rem = docEl.clientWidth / 10;
+
+            // 设置 rem 基准值
+            html.style.fontSize = rem + 'px';
+
+            // Nexus 5 上 rem 值不准，
+            // 如：设置100px，getComputedStyle 中的值却为 85px，导致页面错乱
+            // 这时需要检查设置的值和计算后的值是否一样，
+            // 不一样的话重新设置正确的值
+            var getCPTStyle = window.getComputedStyle;
+            var fontSize = parseFloat(html.style.fontSize, 10);
+            var computedFontSize = parseFloat(getCPTStyle(html)['font-size'], 10);
+            if (getCPTStyle && Math.abs(fontSize - computedFontSize) >= 1) {
+                html.style.fontSize = fontSize * (fontSize / computedFontSize) + 'px';
+            }
+
+            // 设置 data-dpr 属性，留作的 css hack 之用
+            html.setAttribute('data-dpr', dpr);
+
+            // 安卓平台额外加上标记类
+            if (isAndorid) {
+                html.setAttribute('data-platform', 'android');
+            }
+        })();
+	</script>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="g-doc">
+		<div id="js-person" class="m-person person1">
+			<img class="avatar" src="img/ico-logo.png" alt="">
+		</div>
+		<div class="m-section section-input show">
+			<div class="top">
+				<div class="title">邀请码</div>
+				<div class="code">AAAA</div>	
+			</div>
+			<div class="center">
+				<div class="u-input">
+					<input type="tel" class="phone" placeholder="手机号">
+					<div class="getIdCode">获取验证码</div>
+				</div>
+				<div class="u-input">
+					<input type="tel" class="idCode" placeholder="验证码">
+				</div>
+				<a id="js-send" class="btn-send" href="javascript:;"></a>
+			</div>
+		</div>
+		<div class="m-section section-success">
+			<div class="success">
+				<a class="download" href="//www.pgyer.com/coschat"></a>
+			</div>
+		</div>
+		<div class="m-section section-has">
+			<div class="has">
+				<a class="download" href="//www.pgyer.com/coschat"></a>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/orienter.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
