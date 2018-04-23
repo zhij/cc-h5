@@ -74,9 +74,9 @@ $send.click(function(){
 		$(".m-section").removeClass("show");
 		$(".section-success").addClass("show");
 
-		// 已经领过啦
-		$(".m-section").removeClass("show");
-		$(".section-has").addClass("show");
+		// // 已经领过啦
+		// $(".m-section").removeClass("show");
+		// $(".section-has").addClass("show");
 	}
 })
 

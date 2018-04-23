@@ -27,10 +27,13 @@ html,body {
 .m-house {
 	position: absolute;
     // top: -51px;
-    left: -100px;
-    width: 600px;
+    // left: -300px;
+    left: rem(-300);
+    // width: 900px;
+    width: rem(1499);
     bottom: rem(-150);
-    height: 300px;
+    // height: 1000px;
+    height: rem(835);
     overflow: hidden;
 	img {
 		width: 100%;
@@ -141,6 +144,7 @@ html,body {
 			background: url(../img/input-bg.png) no-repeat center;
 			background-size: cover;
 			input {
+	        	font-size: 12px;
 				flex: 1;
 				height: rem(60);
 				margin-left: rem(30);
@@ -152,13 +156,14 @@ html,body {
 			}
 			input::-webkit-input-placeholder{
 	            color: #fff;
+	            font-size: 12px;
 	        }
 	        .getIdCode {
 				height: rem(60);
 				line-height: rem(60);
 	        	margin-right: rem(30);
 	        	color: #fbdb25;
-	        	font-size: 12px;
+	        	font-size: 11px;
 	        }
 		}
 		.btn-send {
