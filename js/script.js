@@ -11,6 +11,7 @@ o.onOrient = function (obj) {
     console.log([a,b]);
 
     $(".m-person").css("-webkit-transform", "translate3d(" + a + "px," + b + "px,0)");
+    $(".m-house").css("-webkit-transform", "translate3d(" + 1.5*a + "px," + b + "px,0)");
 
 };
 o.init();
@@ -22,6 +23,7 @@ $('.getIdCode').click(function(){
 	var that = this;
 	if(!isClicked){
 		isClicked = true;
+		$(that).text(i+'s');
 		// todo 调获取验证码接口
 		// ...
 		var timer1 = setInterval(function(){

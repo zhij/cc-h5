@@ -10,14 +10,24 @@ html, body {
 
 .g-bg {
   height: 100%;
-  background: url(../img/g-bg.jpg) no-repeat center;
+  background: url(../img/bg_02.jpg) no-repeat center;
   background-size: cover; }
 
 .g-doc {
   position: relative;
-  height: 100%;
-  background: url(../img/g-bg.jpg) no-repeat center;
-  background-size: cover; }
+  height: 100%; }
+
+.m-house {
+  position: absolute;
+  left: -100px;
+  width: 600px;
+  bottom: -2rem;
+  height: 300px;
+  overflow: hidden; }
+  .m-house img {
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: 100% auto; }
 
 .m-person {
   position: absolute;
